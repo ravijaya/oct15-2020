@@ -1,0 +1,44 @@
+============================= test session starts ==============================
+platform linux -- Python 3.7.6, pytest-6.1.1, py-1.9.0, pluggy-0.13.1 -- /home/ravijaya/Trainings/Python-RestAPI-Cisco/oct112/bin/python
+cachedir: .pytest_cache
+rootdir: /home/ravijaya/Trainings/Python-PCI/oct112
+plugins: reportlog-0.1.1
+collecting ... collected 11 items
+
+test/demotestcase_test.py::TestSampleCase::test_one PASSED               [  9%]
+test/demotestcase_test.py::TestSampleCase::test_attrib PASSED            [ 18%]
+test/test_example.py::test_ok PASSED                                     [ 27%]
+test/test_example.py::test_fail FAILED                                   [ 36%]
+test/test_example.py::test_error ERROR                                   [ 45%]
+test/test_example.py::test_skip SKIPPED                                  [ 54%]
+test/test_example.py::test_xfail XFAIL                                   [ 63%]
+test/test_example.py::test_xpass XPASS                                   [ 72%]
+test/test_sample.py::test_power PASSED                                   [ 81%]
+test/test_sample.py::test_alpha PASSED                                   [ 90%]
+test/test_systemexit.py::test_for_exit PASSED                            [100%]
+
+==================================== ERRORS ====================================
+_________________________ ERROR at setup of test_error _________________________
+
+    @pytest.fixture
+    def error_fixture():
+>       assert 0
+E       assert 0
+
+test/test_example.py:7: AssertionError
+=================================== FAILURES ===================================
+__________________________________ test_fail ___________________________________
+
+    def test_fail():
+>       assert 0
+E       assert 0
+
+test/test_example.py:15: AssertionError
+=========================== short test summary info ============================
+SKIPPED [1] test/test_example.py:23: skipping this test
+XFAIL test/test_example.py::test_xfail
+  reason: xfailing this test
+XPASS test/test_example.py::test_xpass always xfail
+ERROR test/test_example.py::test_error - assert 0
+FAILED test/test_example.py::test_fail - assert 0
+==== 1 failed, 6 passed, 1 skipped, 1 xfailed, 1 xpassed, 1 error in 0.05s =====

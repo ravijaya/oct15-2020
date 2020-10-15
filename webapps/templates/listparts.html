@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list of parts items</title>
+</head>
+<body>
+<table cellspacing="5" cellpadding="5">
+    <caption><a href="/add">add part</a></caption>
+    <tr>
+            {% for col in rows[0] %}
+            <td>{{ col }}</td>
+            {% endfor %}
+            <td>edit</td>
+            <td>delete</td>
+    </tr>
+    {% for row in rows[1:] %}
+        <tr>
+            {% for col in row %}
+            <td>{{ col }}</td>
+            {% endfor %}
+            <td><a href="">edit</a></td>
+            <td><a href="delete/{{row[0]}}">delete</a></td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

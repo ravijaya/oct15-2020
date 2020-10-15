@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+    <testsuite errors="1" failures="1" hostname="debian" name="pytest" skipped="2" tests="11" time="0.070"
+               timestamp="2020-10-15T16:30:12.642981">
+        <testcase classname="test.demotestcase_test.TestSampleCase" name="test_one" time="0.001"/>
+        <testcase classname="test.demotestcase_test.TestSampleCase" name="test_attrib" time="0.000"/>
+        <testcase classname="test.test_example" name="test_ok" time="0.000"/>
+        <testcase classname="test.test_example" name="test_fail" time="0.001">
+            <failure message="assert 0">def test_fail():
+                &gt; assert 0
+                E assert 0
+
+                test/test_example.py:15: AssertionError
+            </failure>
+        </testcase>
+        <testcase classname="test.test_example" name="test_error" time="0.001">
+            <error message="failed on setup with &quot;assert 0&quot;">@pytest.fixture
+                def error_fixture():
+                &gt; assert 0
+                E assert 0
+
+                test/test_example.py:7: AssertionError
+            </error>
+        </testcase>
+        <testcase classname="test.test_example" name="test_skip" time="0.001">
+            <skipped message="skipping this test" type="pytest.skip">
+                /home/ravijaya/Trainings/Python-PCI/oct112/test/test_example.py:23: skipping this test
+            </skipped>
+        </testcase>
+        <testcase classname="test.test_example" name="test_xfail" time="0.001">
+            <skipped message="xfailing this test" type="pytest.xfail"/>
+        </testcase>
+        <testcase classname="test.test_example" name="test_xpass" time="0.001"/>
+        <testcase classname="test.test_sample" name="test_power" time="0.001"/>
+        <testcase classname="test.test_sample" name="test_alpha" time="0.000"/>
+        <testcase classname="test.test_systemexit" name="test_for_exit" time="0.000"/>
+    </testsuite>
+</testsuites>
